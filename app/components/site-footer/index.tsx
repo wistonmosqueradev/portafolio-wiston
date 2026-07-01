@@ -1,7 +1,7 @@
 const socialLinks = [
   { href: "https://github.com", label: "GitHub" },
   { href: "https://www.linkedin.com", label: "LinkedIn" },
-  { href: "mailto:alex@email.com", label: "Email" },
+  { href: "mailto:wistonmosqueradev@gmail.com", label: "Email" },
 ];
 
 export default function SiteFooter() {

@@ -1,5 +1,11 @@
 import React from "react";
 
+const socialLinks = [
+  { href: "https://www.linkedin.com", label: "LinkedIn" },
+  { href: "mailto:wistonmosqueradev@gmail.com", label: "Email" },
+  { href: "https://wa.me/+573016538303", label: "WhatsApp" }
+];
+
 const Contacto = () => {
   return (
     <section
@@ -16,12 +22,29 @@ const Contacto = () => {
         Si buscas una propuesta clara, visualmente cuidada y técnicamente
         sólida, me encantaría saber más de tu proyecto.
       </p>
-      <a
-        href="mailto:contacto@wiston.dev"
+      <div className="mt-8 flex flex-col items-center gap-4">
+   <p
         className="mt-8 inline-flex rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--background)] transition hover:opacity-90"
       >
         Escríbeme
-      </a>
+      </p>
+   
+      <ul className="mt-8 flex flex-wrap items-center gap-8 text-lg text-slate-300">
+        {socialLinks.map((item) => (
+          <li key={item.label}>
+            <a
+              href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+              className="transition-colors hover:text-cyan-300 cursor-pointer"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+      </div>
+   
     </section>
   );
 };
