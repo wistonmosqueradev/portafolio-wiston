@@ -1,64 +1,85 @@
-import Image from "next/image";
+import Contacto from "./components/contacto";
+import Navbar from "./components/navbar";
+import Proyectos from "./components/proyectos";
+import SobreMi from "./components/sobre-mi";
+
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation wiston 333
-          </a>
-        </div>
+    <div className="min-h-screen">
+      <Navbar />
+      <main
+        id="inicio"
+        className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 lg:px-8 lg:py-16"
+      >
+        <section className="grid gap-8 rounded-[2rem] border border-[var(--border)] bg-[color:var(--surface)]/80 p-8 shadow-[0_20px_80px_rgba(5,10,25,0.35)] lg:grid-cols-[1.2fr_0.8fr] lg:p-12">
+          <div className="flex flex-col justify-center">
+            <p className="mb-4 w-fit rounded-full border border-[var(--accent)]/30 bg-[var(--accent)]/10 px-3 py-1 text-sm font-medium text-[var(--accent)]">
+              Desarrollador Frontend
+            </p>
+            <h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-[var(--foreground)] sm:text-5xl">
+              Hola, soy Wiston y creo experiencias web modernas y memorables.
+            </h1>
+            <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--muted)]">
+              Me enfoco en interfaces limpias, rápidas y pensadas para que cada
+              producto sea claro, usable y atractivo.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#proyectos"
+                className="rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-[var(--background)] transition hover:opacity-90"
+              >
+                Ver proyectos
+              </a>
+              <a
+                href="#contacto"
+                className="rounded-full border border-[var(--border)] px-5 py-3 text-sm font-semibold text-[var(--foreground)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+              >
+                Hablemos
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--background)]/70 p-6">
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] text-xl font-semibold text-[var(--background)]">
+                WM
+              </div>
+              <div>
+                <p className="font-semibold text-[var(--foreground)]">
+                  Wiston Mosquera
+                </p>
+                <p className="text-sm text-[var(--muted)]">
+                  Frontend • UI • Performance
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
+                <p className="text-sm text-[var(--muted)]">
+                  Proyectos entregados
+                </p>
+                <p className="mt-2 text-2xl font-semibold text-[var(--foreground)]">
+                  +12
+                </p>
+              </div>
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
+                <p className="text-sm text-[var(--muted)]">Enfoque principal</p>
+                <p className="mt-2 text-2xl font-semibold text-[var(--foreground)]">
+                  UX
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <SobreMi />
+
+        <Proyectos />
+
+        <Contacto />
       </main>
     </div>
   );
