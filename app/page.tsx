@@ -1,7 +1,10 @@
 import Contacto from "./components/contacto";
 import Navbar from "./components/navbar";
+import Perfil from "./components/perfil";
 import Proyectos from "./components/proyectos";
+import SiteFooter from "./components/site-footer";
 import SobreMi from "./components/sobre-mi";
+import ExperienceSection from "./components/sobre-mi/ExperienceSection";
 
 
 
@@ -41,46 +44,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--background)]/70 p-6">
-            <div className="flex items-center gap-4">
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[var(--accent)] to-[var(--accent-2)] text-xl font-semibold text-[var(--background)]">
-                WM
-              </div>
-              <div>
-                <p className="font-semibold text-[var(--foreground)]">
-                  Wiston Mosquera
-                </p>
-                <p className="text-sm text-[var(--muted)]">
-                  Frontend • UI • Performance
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
-                <p className="text-sm text-[var(--muted)]">
-                  Proyectos entregados
-                </p>
-                <p className="mt-2 text-2xl font-semibold text-[var(--foreground)]">
-                  +12
-                </p>
-              </div>
-              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4">
-                <p className="text-sm text-[var(--muted)]">Enfoque principal</p>
-                <p className="mt-2 text-2xl font-semibold text-[var(--foreground)]">
-                  UX
-                </p>
-              </div>
-            </div>
-          </div>
+     <Perfil/>
         </section>
 
         <SobreMi />
 
-        <Proyectos />
+        <ExperienceSection />
 
+        <Proyectos />
         <Contacto />
       </main>
+      <footer>
+        <SiteFooter/>
+      </footer>
     </div>
   );
 }

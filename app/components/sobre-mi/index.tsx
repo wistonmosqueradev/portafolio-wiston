@@ -36,14 +36,19 @@ const SobreMi = () => {
               Habilidades clave
             </h3>
             <div className="mt-5 flex flex-wrap gap-2">
-              {habilidades.map((habilidad) => (
-                <span
-                  key={habilidad}
+              {
+               habilidades.map((habilidades)=>{
+                return(
+                  <span
+                  key={habilidades}
                   className="rounded-full border border-[var(--border)] bg-[var(--background)]/70 px-3 py-2 text-sm text-[var(--foreground)]"
                 >
-                  {habilidad}
+                  {habilidades}
                 </span>
-              ))}
+                )
+               })
+
+              }
             </div>
           </article>
         </section>
